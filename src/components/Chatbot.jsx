@@ -576,10 +576,10 @@ Keep being awesome, ${details.firstName}! 🌟`;
   };
 
   return (
-    <>
-      <div className="w-full max-w-4xl mx-auto h-screen flex flex-col p-14">
+    <div className="h-screen flex items-center justify-center p-4">
+      <div className="w-full max-w-3xl h-[600px] flex flex-col shadow-lg rounded-3xl overflow-hidden">
         {/* Header */}
-        <div className="bg-white rounded-t-3xl border border-slate-200 p-6 shadow-sm flex-shrink-0">
+        <div className="bg-white border-b border-slate-200 p-6 flex-shrink-0">
           <div className="flex items-center justify-center">
             <div className="flex items-center space-x-3">
               <Avatar className="h-12 w-12">
@@ -612,9 +612,12 @@ Keep being awesome, ${details.firstName}! 🌟`;
         </div>
 
         {/* Chat Container */}
-        <div className="bg-white border-x border-slate-200 shadow-sm flex-1 flex flex-col">
+        <div className="bg-white flex-1 flex flex-col overflow-hidden">
           {/* Messages Area */}
-          <ScrollArea className="flex-1 p-6" ref={scrollAreaRef}>
+          <ScrollArea
+            className="flex-1 p-6 overflow-y-auto"
+            ref={scrollAreaRef}
+          >
             <div className="space-y-4">
               {messages.map((message) => (
                 <div
@@ -705,7 +708,7 @@ Keep being awesome, ${details.firstName}! 🌟`;
         </div>
 
         {/* Input Area */}
-        <div className="bg-white rounded-b-3xl border border-slate-200 p-6 shadow-sm flex-shrink-0">
+        <div className="bg-white border-t border-slate-200 p-6 flex-shrink-0">
           <div className="flex items-center space-x-3">
             <div className="flex-1 relative">
               <Input
@@ -744,7 +747,7 @@ Keep being awesome, ${details.firstName}! 🌟`;
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
