@@ -5,27 +5,32 @@ A sophisticated, AI-powered conversational chatbot built with React and OpenAI t
 ## 🌟 Key Features
 
 ### � Natural Language Processing
+
 - **Maya AI Assistant**: Meet Maya, your friendly MentorCloud guide who speaks like a real person
 - **Intelligent Conversation Flow**: AI dynamically adapts the conversation based on user responses
 - **Context-Aware Responses**: Remembers everything you've shared and builds upon it naturally
 - **Smart Data Extraction**: Automatically extracts information from natural conversation
 
 ### 💬 Human-like Interaction
+
 - **Conversational Personality**: Warm, encouraging, and genuinely curious about your journey
 - **Natural Follow-ups**: Asks relevant questions that flow organically from your answers
 - **Emotional Intelligence**: Validates your goals and shows genuine interest in your aspirations
 - **Adaptive Communication**: Adjusts tone and questions based on your responses
 
 ### � Intelligent Information Collection
+
 Collects comprehensive user data naturally through conversation:
+
 - **Personal Information**: Name, age, email
 - **Interests & Skills**: Areas you want to develop (programming, design, business, etc.)
 - **Experience Level**: Beginner, intermediate, or advanced
-- **Goals & Aspirations**: What you hope to achieve through mentoring  
+- **Goals & Aspirations**: What you hope to achieve through mentoring
 - **Availability**: Time commitment for mentoring sessions
 - **Preferences**: Specific mentor requirements (optional)
 
 ### ✨ Enhanced User Experience
+
 - **Progress Tracking**: Visual progress bar showing completion percentage
 - **Quick Suggestions**: Smart suggestion chips for faster responses
 - **Typing Indicators**: Realistic typing delays for natural feel
@@ -44,17 +49,20 @@ Collects comprehensive user data naturally through conversation:
 ### Installation
 
 1. **Clone the repository:**
+
 ```bash
 git clone <repository-url>
 cd mentor-cloud-chatbot
 ```
 
 2. **Install dependencies:**
+
 ```bash
 npm install
 ```
 
 3. **Set up environment variables:**
+
 ```bash
 # Copy the example environment file
 cp .env.example .env
@@ -65,12 +73,13 @@ VITE_OPENAI_MODEL=gpt-4o
 ```
 
 4. **Start the development server:**
+
 ```bash
 npm run dev
 ```
 
 5. **Open your browser:**
-Navigate to `http://localhost:5173` and meet Maya!
+   Navigate to `http://localhost:5173` and meet Maya!
 
 ## 🎭 Meet Maya - Your AI Assistant
 
@@ -119,12 +128,13 @@ Modify Maya's personality in `src/services/openaiService.js`:
 
 ```javascript
 // Adjust conversation style, tone, and approach
-const systemPrompt = `You are Maya, MentorCloud's assistant...`
+const systemPrompt = `You are Maya, MentorCloud's assistant...`;
 ```
 
 ### Styling & Branding
 
 Update the visual design in `src/App.css`:
+
 - Color schemes and gradients
 - Animation timings
 - Layout spacing
@@ -135,7 +145,14 @@ Update the visual design in `src/App.css`:
 Add or modify information collection by updating the required fields array:
 
 ```javascript
-const required = ['name', 'email', 'interests', 'experience', 'goals', 'availability'];
+const required = [
+  "name",
+  "email",
+  "interests",
+  "experience",
+  "goals",
+  "availability",
+];
 ```
 
 ## 📊 Conversation Analytics
@@ -150,20 +167,23 @@ The chatbot includes built-in analytics capabilities:
 ## 🛠 Technical Architecture
 
 ### Core Technologies
+
 - **React 18**: Modern component-based UI
 - **OpenAI GPT-4o**: Advanced natural language processing
 - **Framer Motion**: Smooth animations and transitions
 - **Vite**: Lightning-fast development and building
 
 ### Service Architecture
+
 - **OpenAIService**: Handles all AI interactions and data processing
 - **Chatbot Component**: Main UI component with state management
 - **Configuration System**: Flexible settings for different environments
 
 ### Data Flow
+
 1. User types message
 2. AI extracts structured data
-3. Context is updated with new information  
+3. Context is updated with new information
 4. AI generates natural response
 5. Progress is updated
 6. Cycle continues until completion
@@ -171,6 +191,7 @@ The chatbot includes built-in analytics capabilities:
 ## 🌐 Deployment
 
 ### Environment Variables
+
 ```bash
 # Required
 VITE_OPENAI_API_KEY=your_openai_api_key
@@ -182,6 +203,7 @@ VITE_TYPING_DELAY=1000
 ```
 
 ### Build for Production
+
 ```bash
 npm run build
 npm run preview
@@ -214,6 +236,7 @@ We welcome contributions to make Maya even more natural and helpful!
 ## 📞 Support
 
 For questions about the natural language chatbot:
+
 - Technical issues: Check the console for error messages
 - API problems: Verify your OpenAI API key and quota
 - Feature requests: Open an issue on GitHub
